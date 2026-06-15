@@ -1,4 +1,2 @@
-n1 = int(input("Digite um Valor: "))
-n2 = int(input("Digite outro: "))
-x = n1 + n2
-print(f'A soma entre {n1} e {n2} vale {x} ')
+v = input("Digite algo:")
+print(type(v) , v.isalnum() , v.isalpha(), v.isascii(), v.isdecimal(), v.isdigit(), v.isidentifier(), v.islower(), v.isprintable(), v.isnumeric(), v.isspace(), v.istitle(), v.isupper())
