@@ -1,0 +1,8 @@
+g = input("Digite algo:")
+n = g.isnumeric()
+ma = g.isupper()
+al = g.isalpha()
+aln = g.isalnum()
+mi = g.islower()
+c = g.istitle()
+print(f"O tipo desse valor é {type(g)} \nÉ numerico {n} \nÉ maiusculo? {ma} \nÉ alfabetico? {al} \nÉ alfanumerico? {aln} \nÉ minuscula? {mi} \nÉ capitalizada? {c}") 
