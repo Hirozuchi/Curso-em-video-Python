@@ -1,0 +1,2 @@
+v = input("Digite algo:")
+print(type(v) , v.isalnum() , v.isalpha(), v.isascii(), v.isdecimal(), v.isdigit(), v.isidentifier(), v.islower(), v.isprintable(), v.isnumeric(), v.isspace(), v.istitle(), v.isupper())
