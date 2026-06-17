@@ -1,0 +1,6 @@
+na = input('Digite seu Nome Completo:')
+ma = na.upper()
+mn = na.lower()
+ct = len(na.replace(' ', ''))
+frst = len(na.split()[0])
+print(f'Maisculo:{ma} \nminusculo:{mn} \nQuantidade de Letras:{ct} \nLetras no Primeiro Nome:{frst}')
