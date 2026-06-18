@@ -30,5 +30,5 @@ else:
 
 # Solução feita sem usar if else:
 # nms = [n1, n2, n3]
-# nms.sort()A
+# nms.sort()
 # print(f'O número maior e {nms[2]} e o menor {nms[0]}')
