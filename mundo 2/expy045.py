@@ -28,10 +28,12 @@ elif jg == 2: #Player plays Paper
         print(f'O Computador jogou {l[2]} \nO jogador jogou {l[1]} \nDERROTA DO JOGADOR')
     else:
         print(f'O Computador jogou {l[0]} \nO jogador jogou {l[1]} \nVITORIA DO JOGADOR')
-else: #Player plays Scissors
+elif jg == 3: #Player plays Scissors
     if jg == ppt:
         print(f'O computador jogou {l[2]} \n Jogador jogou {l[2]} \n EMPATE')
     elif ppt == 1:
         print(f'O Computador jogou {l[1]} \nO jogador jogou {l[2]} \nDERROTA DO JOGADOR')
     else:
         print(f'O Computador jogou {l[0]} \nO jogador jogou {l[2]} \nVITORIA DO JOGADOR')
+else:
+    print('JOGADA INVALIDA')
