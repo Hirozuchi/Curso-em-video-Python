@@ -24,5 +24,12 @@ while True:
         d4 = m10 // 1
         n1 += d4
         break
-print(f'Celulas de R$50: {n50} \nCelulas de R$20: {n20} \nCelulas de R$10: {n10} \nCelulas de R$1: {n1}')
+if n50 != 0:
+    print(f'Celulas de R$50: {n50}')
+if n20 != 0:
+    print(f'Celulas de R$20: {n20}')
+if n10 != 0:
+    print(f'Celulas de R$10: {n10}')
+if n1 != 0:
+    print(f'Celulas de R$1: {n1}')
 print('FIM DO SAQUE')
