@@ -1,13 +1,13 @@
 from datetime import datetime
-nas = int(input('Digite o Ano de nascimento: '))
-idade = datetime.now().year - nas
-if idade <= 9:
-    print(f'O Atleta possui {idade} anos \nCategoria: MIRIM')
-elif idade <= 14:
-    print(f'O Atleta possui {idade} anos \nCategoria: INFANTIL')
-elif idade <= 19:
-    print(f'O Atleta possui {idade} anos \nCategoria: JUNIOR')
-elif idade <=25:
-    print(f'O Atleta possui {idade} anos \nCategoria: SENIOR')
-elif idade > 25:
-    print(f'O Atleta possui {idade} anos \nCategoria: MASTER')
+birthyear = int(input('Digite o Ano de nascimento: '))
+age = datetime.now().year - birthyear
+if age <= 9:
+    print(f'O Atleta possui {age} anos \nCategoria: MIRIM')
+elif age <= 14:
+    print(f'O Atleta possui {age} anos \nCategoria: INFANTIL')
+elif age <= 19:
+    print(f'O Atleta possui {age} anos \nCategoria: JUNIOR')
+elif age <=25:
+    print(f'O Atleta possui {age} anos \nCategoria: SENIOR')
+elif age > 25:
+    print(f'O Atleta possui {age} anos \nCategoria: MASTER')

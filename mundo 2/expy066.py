@@ -1,11 +1,11 @@
-n = 0
-l = []
+num = 0
+lst = []
 cont = 0
 while True:
-    n  = int(input('Digite um Valor (999 para parar): '))
-    if n == 999:
+    num  = int(input('Digite um Valor (999 para parar): '))
+    if num == 999:
         break
-    l.append(n)
+    lst.append(num)
     cont += 1
-t = sum(l)
-print(f'Soma dos numeros {t} \n Quantidade de Numeros {cont}')
+total = sum(lst)
+print(f'Soma dos numeros {total} \n Quantidade de Numeros {cont}')

@@ -1,6 +1,6 @@
 import time
-for f in range(10, 0, -1):
-    print(f)
+for fire in range(10, 0, -1):
+    print(fire)
     time.sleep(1)
 print('''         .* *.               `o`o`
          *. .*              o`o`o`o      ^,^,^

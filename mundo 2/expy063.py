@@ -1,12 +1,12 @@
-n = int(input('termos para mostrar: '))
-f1 = 0
-f2 = 1
-s = 0
-while s <= (n + 1):
-   print(s, end=' ')
-   f1 = f2
-   f2 = s
-   s = f1 + f2
+num= int(input('termos para mostrar: '))
+term1 = 0
+term2 = 1
+total = 0
+while total <= (num + 1):
+   print(total, end=' ')
+   term1 = term2
+   term2 = total
+   total = term1 + term2
 '''
 f = [0, 1]
 for i in range(2, n):

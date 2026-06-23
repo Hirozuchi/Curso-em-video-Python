@@ -1,6 +1,6 @@
-so = 0
+total = 0
 for i in range(0, 6):
-    nm = int(input('Digite um numero: '))
-    if nm % 2 == 0:
-        so += nm
-print(so)
+    num = int(input('Digite um numero: '))
+    if num % 2 == 0:
+        total += num
+print(total)

@@ -1,12 +1,12 @@
-l1 = float(input('Digite o comprimento do primeiro lado:'))
-l2 = float(input('Digite o comprimento do segundo lado:'))
-l3 = float(input('Digite o comprimento do terceiro lado:'))
-sr = [l1, l2, l3]
-sr.sort()
-if sr[0] + sr[1] >= sr[2]:
-    if l1 == l2 == l3:
+side1 = float(input('Digite o comprimento do primeiro lado:'))
+side2 = float(input('Digite o comprimento do segundo lado:'))
+side3 = float(input('Digite o comprimento do terceiro lado:'))
+sidelst = [side1, side2, side3]
+sidelst.sort()
+if sidelst[0] + sidelst[1] >= sidelst[2]:
+    if side1 == side2 == side3:
         print('Os lados formam um triangulo equilatero')
-    elif l1 == l2 or l2 == l3 or l3 == l1:
+    elif side1 == side2 or side2 == side3 or side3 == side1:
         print('os lados formam um triangulo isoceles')
     else:
         print('Os lados formam um triangulo escaleno')

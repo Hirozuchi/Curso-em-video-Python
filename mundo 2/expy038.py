@@ -1,8 +1,8 @@
-n1 = int(input('Digite um numero inteiro: '))
-n2 = int(input('Digite outro numero inteiro: '))
-if n1 > n2:
-    print(f'O numero {n1} e maior que {n2}')
-elif n2 > n1:
-    print(f'O numero {n2} e maior que {n1}')
-elif n1 == n2:
+num1 = int(input('Digite um numero inteiro: '))
+num2 = int(input('Digite outro numero inteiro: '))
+if num1 > num2:
+    print(f'O numero {num1} e maior que {num2}')
+elif num2 > num1:
+    print(f'O numero {num2} e maior que {num1}')
+elif num1 == num2:
     print('Os numeros sao iguais')

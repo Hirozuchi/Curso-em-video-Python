@@ -1,20 +1,20 @@
-p18 = 0
-f20 = 0
-h = 0
+people18 = 0
+fem20 = 0
+man = 0
 while True:
-    i = int(input('Idade: '))
-    s = ' '
-    while s not in 'MF':
-        s = input('Sexo [M/F]: ').upper()
-    if i >= 18:
-        p18 += 1
-    if s == 'M':
-        h += 1
-    if s == 'F' and i < 20:
-        f20 += 1
-    c = ' '
-    while c not in 'SN':
-        c = input('Continuar [S/N]? ').upper()
-    if c == 'N':
+    age = int(input('Idade: '))
+    sex = ' '
+    while sex not in 'MF':
+        sex = input('Sexo [M/F]: ').upper()
+    if age >= 18:
+        people18 += 1
+    if sex == 'M':
+        man += 1
+    if sex == 'F' and age < 20:
+        fem20 += 1
+    yesorno = ' '
+    while yesorno not in 'SN':
+        yesorno = input('Continuar [S/N]? ').upper()
+    if yesorno == 'N':
         break
-print(f'Pessoas com Mais de 18: {p18} \nHomens: {h} \nMulheres com menos de 20: {f20}')
+print(f'Pessoas com Mais de 18: {people18} \nHomens: {man} \nMulheres com menos de 20: {fem20}')

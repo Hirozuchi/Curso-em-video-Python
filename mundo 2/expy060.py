@@ -1,13 +1,13 @@
 import math
-r = 0
-while r == 0:
-    v1 = int(input('digite Numero inteiro:'))
-    if v1 < 0:
+count = 0
+while count == 0:
+    value = int(input('digite Numero inteiro:'))
+    if value < 0:
         print('Digite um Numero positivo, Tente novamente')
     else:
-        fac = math.factorial(v1)
-        print(f'O factorial de {v1} e {fac}')
-        r += 1
+        fact = math.factorial(value)
+        print(f'O factorial de {value} e {fact}')
+        count += 1
 
 '''v1 = int(input('Numero inteiro: '))
 if v1 < 0:

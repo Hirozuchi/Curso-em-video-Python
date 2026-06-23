@@ -1,11 +1,11 @@
 from datetime import datetime
-an = datetime.now().year
-ma = 0
-mn = 0
+year = datetime.now().year
+ofage = 0
+minor = 0
 for i in range(0,7):
-    id = int(input('Ano Nascimento:'))
-    if an - id >= 21:
-        ma += 1
-    elif an - id < 21:
-        mn += 1
-print(f'Maior de Idade:{ma} \nMenor de Idade:{mn}')
+    birthyear = int(input('Ano Nascimento:'))
+    if year - birthyear >= 21:
+        ofage += 1
+    elif year - birthyear < 21:
+        minor += 1
+print(f'Maior de Idade:{ofage} \nMenor de Idade:{minor}')

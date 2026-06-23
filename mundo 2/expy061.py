@@ -1,7 +1,7 @@
-v = 0
-t = int(input('Primeiro termo da PA: '))
-r = int(input('Razao: '))
-while v < 10:
-    v += 1
-    t += r
-    print(t, end=' ')
+value = 0
+term = int(input('Primeiro termo da PA: '))
+ratio = int(input('Razao: '))
+while value < 10:
+    value += 1
+    term += ratio
+    print(term, end=' ')

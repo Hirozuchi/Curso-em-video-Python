@@ -1,33 +1,33 @@
 import random
 from time import sleep
-p1 = 0
-v = 0
-s = 0
+player1 = 0
+value = 0
+result = 0
 print('JOGO PAR OU IMPAR')
 while True:
-    ty = ' '
+    evenuneven = ' '
     cpu = random.randint(1, 10)
-    v = int(input('Digite um Valor: '))
+    value = int(input('Digite um Valor: '))
     while ty not in 'PI':
         ty = input('Par ou Impar [P/I]: ').upper()
-    s = cpu + v
-    if ty.upper() == 'P':
-        if s % 2 == 0:
-            p1 += 1
-            print(f'Jogador jogou {v}, o Computador {cpu}, Total {s} deu PAR \n VITORIA DO JOGADOR')
+    result = cpu + value
+    if evenuneven.upper() == 'P':
+        if result % 2 == 0:
+            player1 += 1
+            print(f'Jogador jogou {value}, o Computador {cpu}, Total {result} deu PAR \n VITORIA DO JOGADOR')
             print('Vamos Jogar Novamente')
             sleep(1)
         else:
-            print(f'Jogador jogou {v}, Computador {cpu}, Total: {s} deu INPAR \n VITORIA DO COMPUTADOR')
-            print(f'Pontuacao do Jogador: {p1}')
+            print(f'Jogador jogou {value}, Computador {cpu}, Total: {result} deu INPAR \n VITORIA DO COMPUTADOR')
+            print(f'Pontuacao do Jogador: {player1}')
             break
-    elif ty.upper() == 'I':
-        if s % 2 != 0:
-            p1 += 1
-            print(f'Jogador jogou {v}, o Computador {cpu}, Total {s} deu IMPAR \n VITORIA DO JOGADOR')
+    elif evenuneven.upper() == 'I':
+        if result % 2 != 0:
+            player1 += 1
+            print(f'Jogador jogou {value}, o Computador {cpu}, Total {result} deu IMPAR \n VITORIA DO JOGADOR')
             print('Vamos Jogar Novamente')
             sleep(1)
         else:
-            print(f'Jogador jogou {v}, Computador {cpu}, Total: {s} deu PAR \n VITORIA DO COMPUTADOR')
-            print(f'Pontuacao do Jogador: {p1}')
+            print(f'Jogador jogou {value}, Computador {cpu}, Total: {result} deu PAR \n VITORIA DO COMPUTADOR')
+            print(f'Pontuacao do Jogador: {player1}')
             break

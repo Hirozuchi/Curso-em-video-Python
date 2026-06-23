@@ -1,6 +1,6 @@
-h = float(input('Altura:'))
-p = float(input('Peso:'))
-imc = p / (h ** 2)
+height = float(input('Altura:'))
+weight = float(input('Peso:'))
+imc = weight / (height ** 2)
 if imc < 18.5:
     print(f'IMC:{imc:.2f} \nAbaixo do Peso')
 elif 18.5 <= imc < 25:

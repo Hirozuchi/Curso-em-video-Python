@@ -1,12 +1,12 @@
 from datetime import datetime
-nas = int(input('Digite o seu Ano de nascimento: '))
-ano = datetime.now().year
-id = ano - nas
-ame = ano + (-id - 18)
-ama = ano - (id - 18)
-if id < 18:
-    print(f'Quem nasceu em {nas} possui {id} anos em {ano}). \nSeu alistamento sera no ano {ame}')
-elif id > 18:
-    print(f'Quem nasceu em {nas} possui {id} anos em {ano}. \nSeu alistamento esta atrasado {ano - ama} ano(s) \nSeu alistamento foi em {ama}') 
-elif id == 18:
-    print(f'Quem nasceu em {nas} possui {id} anos em {ano}. \n Seu Alistamento e no ano atual ({ano})')
+birthyear = int(input('Digite o seu Ano de nascimento: '))
+year = datetime.now().year
+age = year - birthyear
+yearofage = year + (-age - 18)
+overage = year - (age - 18)
+if age < 18:
+    print(f'Quem nasceu em {birthyear} possui {age} anos em {year}). \nSeu alistamento sera no ano {yearofage}')
+elif age > 18:
+    print(f'Quem nasceu em {birthyear} possui {age} anos em {year}. \nSeu alistamento esta atrasado {year - overage} ano(s) \nSeu alistamento foi em {overage}') 
+elif age == 18:
+    print(f'Quem nasceu em {birthyear} possui {age} anos em {year}. \n Seu Alistamento e no ano atual ({year})')
