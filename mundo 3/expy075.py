@@ -12,4 +12,3 @@ print('Os numeros pares foram', end=' ')
 for par in tuple_num_list:
     if par % 2 == 0:    
         print(par, end=' ')
-
