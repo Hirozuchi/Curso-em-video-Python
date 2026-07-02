@@ -1,55 +1,64 @@
+import json
 from time import sleep
-def title(title):
+
+FILE = 'people.json'
+
+def title(text):
     print('+' * (len(title) + 30))
-    print(title.center(len(title) + 30))
+    print(text.center(len(title) + 30))
     print('+' * (len(title) + 30))
 
+def load_people():
+    try:
+        with open(FILE, 'r') as f:
+            data = json.load(f)
+            return data if isinstance(data, list) else []
+    except (FileNotFoundError, json.JSONDecodeError):
+        return []
+
+def save_people(people):
+    with open(FILE, 'w') as f:
+        json.dump(people, f, indent=4, ensure_ascii=False)
+
+def ask_int(prompt, min_value=0):
+    while True:
+        try:
+            value = int(input(prompt))
+            if value < min_value:
+                raise ValueError
+            return value
+        except ValueError:
+            print('Valor invalido, tente novamente.')
+
+def add_person():
+    title('NOVO CADASTRO')
+    name = input('Nome: ').strip()
+    if not name:
+        print('NADA FOI DIGITADO.')
+        return
+    age = ask_int('Idade: ')
+    people = load_people()
+    people.append({'name': name, 'age': age})
+    save_people(people)
+    print('Pessoa cadastrada com sucesso!')
+
+def show_people():
+    people = load_people()
+    print(people if people else 'Nenhuma pessoa cadastrada ainda.')
+
 def people_system():
+    options = {1: show_people, 2: add_person}
     while True:
         sleep(0.8)
         title('MENU PRINCIPAL')
-        print('1 - Ver Pessoas cadastradas')
-        print('2 - Cadastrar uma pessoa')
-        print('3 - Sair do Sistema')
+        print('1 - Ver Pessoas cadastradas\n2 - Cadastrar uma pessoa\n3 - Sair do Sistema')
         print('+' * 44)
         choice = input('Sua Opcao: ')
-        try:
-            inter = int(choice)
-            if inter == 1:
-                sleep(0.8)
-                with open('peoples.txt', 'r') as file:
-                    files = file.read()
-                    print(files)
-            if inter == 2:
-                sleep(0.8)
-                add_person()
-            if inter == 3:
-                return
-        except:
+        if choice == '3':
+            return
+        action = options.get(int(choice)) if choice.isdigit() else None
+        if action:
+            sleep(0.8)
+            action()
+        else:
             print('Nao e uma OPCAO VALIDA')
-
-def add_person():
-    lst = []
-    title('NOVO CADASTRO')
-    while True:
-        name = input('Nome: ')
-        if not name:
-            print('NADA FOI DIGITADO TENTE NOVAMENTE')
-            continue
-        while True:
-            age = input('Idade: ')
-            try:
-                age = int(age)
-                if age < 0:
-                    raise ValueError
-                break
-            except:
-                print('NAO E UMA IDADE VALIDA, DIGITE NOVAMENTE')
-        lst.append([name, age])
-        with open('peoples.txt', 'a', encoding='utf-8') as file:
-            for people in lst:
-                n = people[0]
-                i = people[1]
-                file.write(f'{n:<35} {i} Anos\n')
-            lst.clear()
-        return

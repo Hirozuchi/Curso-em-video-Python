@@ -1,7 +1,0 @@
-++++++++++++++++++++++++++++++++++++++++++++
-            PESSOAS CADASTRADAS               
-++++++++++++++++++++++++++++++++++++++++++++
-Maria                               87 Anos
-Carlos Eduardo                      42 Anos
-Joana Maria                         77 Anos
-Giovanna Moraes                     23 Anos
