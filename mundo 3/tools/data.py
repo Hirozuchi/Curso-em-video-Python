@@ -4,6 +4,8 @@ def read_money(money):
         np = p.replace(',', '.')
         try:
             price = float(np)
+            if price < 0:
+                raise ValueError
             return price
         except ValueError:
             print(f'ERRO: {p} e uma valor invalido!')
